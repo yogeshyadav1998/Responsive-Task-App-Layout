@@ -101,9 +101,11 @@ section{
     font-weight: 500;
 }
 
-.features-section ul{
+ul.features-list {
     margin-left: 3em;
     padding: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 
 .features-section li{
@@ -232,7 +234,7 @@ nav a{
 }
 
 nav a:hover{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 
@@ -268,12 +270,102 @@ nav a:hover{
         text-decoration: none;
     }
 
+    .go-premium{
+        color: var(--red-color);
+        border: solid 3px rgb(226, 73, 73);
+        border-radius: 5em;
+        margin-top: -0.1em;
+    }
+
+    .go-premium:hover{
+        color: white;
+        background: var(--red-color);
+        font-size: 1em;
+    }
+
+    li.current a{
+        font-weight: bold;
+    }
+
     nav ul{
         display: flex;
         line-height: 1.5em;
     }
 
     nav ul.primary-nav{
-        margin: 0;
+        margin: 0 auto;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    .container{
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    .hero .container{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .hero .left-col{
+        margin: 3em 3em 0 5em;
+    }
+
+    .hero-img{
+        width: 30%;
+        margin-right: 5em;
+    }
+
+    .hero-cta{
+        display: flex;
+    }
+    
+    .watch-video-cta{
+        margin: 0 1em;
+    }
+
+    .features-section{
+        position: relative
+    }
+
+    ul.features-list{
+        display: block;
+        margin-left: 5em;
+    }
+    
+    .features-section img{
+        display: block;
+        width: 30%;
+        position: absolute;
+        right: 2em;
+        bottom: -2em;
+    }
+
+    .testimonial-section ul{
+        display: flex;
+    }
+
+    .testimonial-section li{
+        margin:0 1.5em;
+    }
+
+    .contact-section{
+        position: relative;
+    }
+
+    .contact-section .container{
+        display: flex;
+    }
+
+    .contact-right iframe{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
     }
 }
