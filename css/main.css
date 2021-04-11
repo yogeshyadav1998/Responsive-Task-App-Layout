@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+:root{
+    --red-color: rgb(226, 73, 73);
+}
+
+body{
+    background-color: rgb(250, 232, 226);
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+    background-color: white;
+    padding: 1em;
+}
+
+.logo{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar .container{
+    display: flex;
+    place-content: space-between;
+}
+
+.logo span{
+    color: var(--red-color);
+}
+
+.navbar nav{
+    display: none;
+}
+
+.mobile-menu{
+    cursor: pointer;
+}
+
+.hero a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+
+.features-section ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    padding: 5em 2em;
+}
+
+.hero{
+    text-align: center;
+}
+
+.hero .subhead {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    word-spacing: 0.4em;
+    line-height: 1.5em;
+}
+
+.red-cta{
+    background: var(--red-color);
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border-radius: 1em;
+    display: inline-block;
+}
+
+.watch-video-cta{
+    display: block;
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.watch-video-cta img{
+    margin-right: 1em;
+}
+
+.hero-img{
+    width: 80%;
+    margin-top: 2em;
+}
+
+.features-section{
+    background-color: rgb(100, 96, 96);
+    color: rgb(250, 232, 226);
+    font-weight: 500;
+}
+
+.features-section ul{
+    margin-left: 3em;
+    padding: 0.5em;
+}
+
+.features-section li{
+    margin: 1em;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.features-section li::before{
+    content: '';
+    position: absolute;
+    left: -2em;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+    background-image: url('../images/bullet.svg');
+    background-size: contain;
+}
+
+.features-section img{
+    display: none;
+}
+
+.testimonial-section{
+    background-color: var(--red-color);
+    color:rgb(250, 232, 226);
+}
+
+.testimonial-section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial-section li {
+    text-align: center;
+    font-weight: 600;
+    background-color: brown;
+    width: 80%;
+    margin: 0 auto 5em auto;
+    padding: 2em 1em;
+    border-radius: 3em;
+}
+
+.testimonial-section li img{
+    width: 5em;
+    height: 5em;
+    border: solid 2em brown;
+    border-radius: 50%;
+    margin-top: -4.5em;
+}
+
+.contact-section h2{
+    font-size: 2em;
+}
+
+.contact-section label{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+input, textarea{
+    margin-bottom: 1em;
+    border: solid 1px grey;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+
+.send-message-cta{
+    display: block;
+    background-color: var(--red-color);
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 3em;
+    font-size: 1em;
+    margin-bottom: 3em;
+    cursor: pointer;
+}
+
+.contact-right iframe{
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav .mobile-menu-exit{
+    display: block;
+    float: right;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    background-color: rgb(100, 96, 96);
+    height: 100vh;
+    padding: 1em;
+}
+
+nav.menu-btn{
+    display: block;
+}
+
+nav ul{
+    list-style: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 3em;
+}
+
+nav .primary-nav{
+    margin-top: 5em;
+}
+
+nav a{
+    text-decoration: none;
+    display: block;
+    color: rgb(250, 232, 226);
+    font-size: 1.3em;
+    text-align: right;
+}
+
+nav a:hover{
+    font-size: 1.5em;
+}
+
+
+@media only screen and (min-width : 768px) {
+    .mobile-menu{
+        display: none;
+    }
+
+    nav .mobile-menu-exit{
+        display: none;
+    }
+
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+
+    .navbar nav{
+        display: flex;
+        background: none;
+        justify-content: space-between;
+        position: unset;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    nav a{
+        color: black;
+        padding: 0 1em;
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+    nav ul{
+        display: flex;
+        line-height: 1.5em;
+    }
+
+    nav ul.primary-nav{
+        margin: 0;
+    }
+}
